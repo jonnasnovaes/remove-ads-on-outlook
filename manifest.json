@@ -1,0 +1,20 @@
+{
+    "name": "Remove Ads on Outlook",
+    "version": "1.0",
+    "description": "Este plugin tem o objetivo de maximizar seu espaço de trabalho na tela do outlook mail, desabilitando a barra lateral de propaganda.",
+    "icons": {
+        "16": "assets/16.png",
+        "48": "assets/48.png",
+        "128": "assets/128.png"
+    },
+    "browser_action": {
+        "default_popup": "index.html",
+        "default_icon": "assets/outlook.png"
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["scripts/content.js"]
+    }],
+    "manifest_version": 2,
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
